@@ -1,54 +1,131 @@
-# React + TypeScript + Vite
+<p align="center">
+  <img src="https://svg-banners.vercel.app/api?type=origin&text1=React%20%2B%20TypeScript%20%2B%20Vite&width=800&height=200&fontSize=60" alt="React + TypeScript + Vite" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <a href="https://github.com/your-username/your-repo-name/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/your-username/your-repo-name/ci.yml?branch=main&label=CI&style=for-the-badge" alt="CI Status">
+  </a>
+  <a href="https://github.com/your-username/your-repo-name/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/your-username/your-repo-name?style=for-the-badge" alt="License">
+  </a>
+  <a href="https://github.com/your-username/your-repo-name/issues">
+    <img src="https://img.shields.io/github/issues/your-username/your-repo-name?style=for-the-badge" alt="Open Issues">
+  </a>
+  <a href="https://www.npmjs.com/package/your-package-name">
+    <img src="https://img.shields.io/npm/v/your-package-name?style=for-the-badge" alt="NPM Version">
+  </a>
+</p>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚛️ React + TypeScript + Vite
 
-## Expanding the ESLint configuration
+A lightweight and flexible starter template using **Vite**, **React**, and **TypeScript** with:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Fast HMR via Babel or SWC
+- Scalable ESLint configuration for type safety
+- Production-ready lint rules for React and DOM
 
-```js
+---
+
+## Plugins
+
+This template supports both official plugins for Fast Refresh:
+
+- [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugin-react) (uses Babel)
+- [`@vitejs/plugin-react-swc`](https://github.com/vitejs/vite-plugin-react-swc) (uses SWC)
+
+---
+
+## 🔍 Advanced ESLint Setup
+
+For production-grade projects, extend the default ESLint configuration to enable **type-aware** linting:
+
+```ts
 export default tseslint.config({
   extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
     ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
+    // or stricter config:
+    // ...tseslint.configs.strictTypeChecked,
     ...tseslint.configs.stylisticTypeChecked,
   ],
   languageOptions: {
-    // other options...
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
     },
   },
 })
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+You can also add React-specific rules:
 
-```js
-// eslint.config.js
 import reactX from 'eslint-plugin-react-x'
 import reactDom from 'eslint-plugin-react-dom'
 
 export default tseslint.config({
   plugins: {
-    // Add the react-x and react-dom plugins
     'react-x': reactX,
     'react-dom': reactDom,
   },
   rules: {
-    // other rules...
-    // Enable its recommended typescript rules
     ...reactX.configs['recommended-typescript'].rules,
     ...reactDom.configs.recommended.rules,
   },
 })
-```
+
+
+
+⸻
+
+🚀 Getting Started
+
+npm create vite@latest my-app --template react-ts
+cd my-app
+npm install
+npm run dev
+
+
+
+⸻
+
+📂 Project Structure
+
+├── public/
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── ...
+├── .eslintrc.js
+├── tsconfig.json
+└── vite.config.ts
+
+
+
+⸻
+
+🧪 Run Tests (if applicable)
+
+npm test
+
+
+
+⸻
+
+📄 License
+
+Distributed under the MIT License.
+
+⸻
+
+Maintainer
+
+Made with love by @your-username. Contributions welcome!
+
+---
+
+### Notes:
+- Replace all `your-username`, `your-repo-name`, and `your-package-name` with your actual GitHub and npm info.
+- You can host the `ci.yml` under `.github/workflows/ci.yml` for GitHub Actions badge to work.
+
+Would you like this turned into a live GitHub repository with those configurations scaffolded? Or maybe you'd like a dark-mode banner alternative?
