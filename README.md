@@ -127,5 +127,3 @@ Made with love by @your-username. Contributions welcome!
 ### Notes:
 - Replace all `your-username`, `your-repo-name`, and `your-package-name` with your actual GitHub and npm info.
 - You can host the `ci.yml` under `.github/workflows/ci.yml` for GitHub Actions badge to work.
-
-Would you like this turned into a live GitHub repository with those configurations scaffolded? Or maybe you'd like a dark-mode banner alternative?
